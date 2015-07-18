@@ -334,7 +334,7 @@ class EvernoteDo():
 
         def __derive_note_store_url(token):
             id = self.get_shard_id(token)
-            url = "www.evernote.com/shard/" + id + "/notestore"
+            url = "app.yinxiang.com/shard/" + id + "/notestore"
             if ssl:
                 url = "https://" + url
             else:
@@ -356,7 +356,7 @@ class EvernoteDo():
         token = self.token()
         noteStoreUrl = self.settings.get("noteStoreUrl")
         if not token or not noteStoreUrl:
-            webbrowser.open_new_tab("https://www.evernote.com/api/DeveloperToken.action")
+            webbrowser.open_new_tab("https://app.yinxiang.com/api/DeveloperToken.action")
             self.window.show_input_panel(
                 "Developer Token (required):", token or "",
                 on_token, None, None)
